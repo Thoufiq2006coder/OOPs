@@ -1,17 +1,17 @@
 #include <iostream>
-#include <string> // Include string library
+#include <string>
 using namespace std;
 
 class Book{
     private:
-        string title; // Change char to string
+        string title; 
         float price;
     public:
         void setTitle(const string& Booktitle){
-            title = Booktitle; // Assign string directly
+            title = Booktitle; 
         }
         string getTitle() const{
-            return title; // Return string directly
+            return title; 
         }
 
         void setPrice(float Bookprice){

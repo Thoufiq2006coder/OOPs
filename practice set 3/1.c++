@@ -8,22 +8,22 @@ private:
     int age;
 
 public:
-    // Setting for name
+    // Setter for name
     void setName(const string& studentName) {
         name = studentName;
     }
 
-    // Getting for name
+    // Getter for name
     string getName() const {
         return name;
     }
 
-    // Setting for age
+    // Setter for age
     void setAge(int studentAge) {
         age = studentAge;
     }
 
-    // Getting for age
+    // Getter for age
     int getAge() const {
         return age;
     }
