@@ -1,46 +1,40 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 using namespace std;
 
-class Student {
-private:
-    string name;
-    int age;
-    float marks;
+class Student{
+    private:
+        string name;
+        int age;
+        float marks;
+    public:
 
-public:
-    // Default constructor
-    Student() {
-        name = "Unknown";
-        age = 0;
-        marks = 0.0;
-    }
+        //Default construtor
+        Student(){
+            name = "Default constructor";
+            age = 12;
+            marks = 23.0;
+        }
 
-    // Parameterized constructor
-    Student(string n, int a, float m) {
-        name = n;
-        age = a;
-        marks = m;
-    }
+        //paramatized constructor
+        Student(string n, int a, float m){
+            name = n;
+            age = a;
+            marks = m;
+        }
 
-    // Function to display student details
-    void display() {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-        cout << "Marks: " << marks << endl;
-    }
+        void display() {
+            cout << "Name: " << name << ", Age: " << age << ", Marks: " << marks << endl;
+        }
 };
 
-int main() {
-    // Using default constructor
-    Student student1;
-    cout << "Student 1 details (default constructor):" << endl;
-    student1.display();
+int main(){
+    Student s1, s2("Thoufiq",19,99.9);
 
-    // Using parameterized constructor
-    Student student2("John", 20, 85.5);
-    cout << "\nStudent 2 details (parameterized constructor):" << endl;
-    student2.display();
+    cout << "Student 1 details:" << endl;
+    s1.display();
+
+    cout << "Student 2 details:" << endl;
+    s2.display();
 
     return 0;
 }
