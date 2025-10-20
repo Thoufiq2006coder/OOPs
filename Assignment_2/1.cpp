@@ -7,9 +7,7 @@ class List{
         int size;
         int capacity;
     public:
-        // Rename parameter to 'capacity' to avoid confusion with member 'size'.
         List(int capacity){
-            // A newly created list contains 0 elements.
             this->size = 0;
             this->capacity = capacity;
             arr = new int[this->capacity];
@@ -24,7 +22,6 @@ class List{
                 cout << "List is full!" << endl;
             }
         }
-        // Remove the first occurrence of 'value'. Shift elements left to fill the gap.
         void remove(int value){
             if (size == 0) {
                 cout << "List is empty!" << endl;
@@ -68,4 +65,4 @@ int main(){
     myList.display(); 
     cout << "Size: " << myList.getSize() << endl; 
     return 0;
-} // removing, displaying, and getting the size of the list. Explain why you used constructors and any operator overloading (if used).
+} 
