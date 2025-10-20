@@ -32,17 +32,17 @@ class Employee : public Person{
 };
 
 class Manager : public Employee {
-private:
-    int teamSize;
+    private:
+        int teamSize;
 
-public:
-    void setManager(int size) {
-        teamSize = size;
-    }
-    void display() const {
-        Employee::display();
-        cout << "Team size: " << teamSize << endl;
-    }
+    public:
+        void setManager(int size) {
+            teamSize = size;
+        }
+        void display() const {
+            Employee::display();
+            cout << "Team size: " << teamSize << endl;
+        }
 };
 
 int main() {
