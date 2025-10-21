@@ -1,30 +1,37 @@
 #include <iostream>
 using namespace std;
 
-class Sports; 
+class Sports; // Forward declaration
 
 class Student {
     private:
-        int marks;
+        int marks;  
 
     public:
+        // Constructor to initialize marks
         Student(int m) {
             marks = m;
         }
+
+        // Declare friend function to access private data
         friend void showPerformance(Student s, Sports sp);
 };
 
 class Sports {
     private:
-        int score;
+        int score;  
 
     public:
+        // Constructor to initialize score
         Sports(int sc) {
             score = sc;
         }
+
+        // Declare friend function to access private data
         friend void showPerformance(Student s, Sports sp);
 };
 
+// Friend function accessed private members of both Student and Sports
 void showPerformance(Student s, Sports sp) {
     cout << "Academic mark: " << s.marks << endl;
     cout << "Sports score: " << sp.score << endl;

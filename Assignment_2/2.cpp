@@ -1,15 +1,18 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Dictionary {
     private:
-        string keys[100];
-        string values[100];
-        int size;
+        string keys[100];    
+        string values[100];  // parallel array to hold corresponding values
+        int size;            // current number of stored pairs
     public:
+        // Constructor
         Dictionary() {
             size = 0;
         }
+        
         void add(const string& key, const string& value) {
             for (int i = 0; i < size; ++i) {
                 if (keys[i] == key) {
@@ -25,6 +28,8 @@ class Dictionary {
                 cout << "Dictionary is full!" << endl;
             }
         }
+
+        // Search for a key and return its value or an error message.
         string search(const string& key) {
             for (int i = 0; i < size; ++i) {
                 if (keys[i] == key) {
@@ -33,6 +38,8 @@ class Dictionary {
             }
             return "Key not found!";
         }
+
+        // Display all key-value pairs currently stored.
         void display() {
             for (int i = 0; i < size; ++i) {
                 cout << keys[i] << ": " << values[i] << endl;
@@ -42,15 +49,14 @@ class Dictionary {
 
 int main() {
     Dictionary dict;
-    dict.add("name", "Thoufiq");
-    dict.add("age", "19");
-    dict.add("city", "Chennai");
-
-    cout << "Search age: " << dict.search("age") << endl;
-    cout << "Search country: " << dict.search("country") << endl;
-
+    dict.add("name", "Thoufiq");   
+    dict.add("age", "19");         
+    dict.add("city", "Chennai");  
+    cout << "Search age: " << dict.search("age") << endl;         
+    cout << "Search country: " << dict.search("country") << endl; 
     cout << "All key-value pairs in the dictionary:" << endl;
     dict.display();
 
     return 0;
 }
+

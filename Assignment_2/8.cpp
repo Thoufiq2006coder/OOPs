@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 
+// Base class
 class Calculator {
     public:
+        // Overload
         int add(int a, int b) {
             return a + b;
         }
@@ -11,26 +13,33 @@ class Calculator {
             return a + b;
         }
 
+        // Virtual function 
         virtual void showType() {
             cout << "Base Calculator\n";
         }
-    };
+};
 
-    class ScientificCalculator : public Calculator {
+// Derived class
+class ScientificCalculator : public Calculator {
     public:
+        // Overrides 
         void showType() override {
             cout << "Scientific Calculator\n";
         }
 };
 
 int main() {
-    Calculator basic;
+    Calculator basic;              
     ScientificCalculator sci;
-    cout << "Int Add: " << basic.add(5, 3) << endl;
-    cout << "Float Add: " << basic.add(2.5f, 3.5f) << endl;
-    Calculator* ptr;
-    ptr = &sci;
-    ptr->showType(); 
+
+    //Demonstrate Overloading
+    cout << "Int Add: " << basic.add(5, 3) << endl;         
+    cout << "Float Add: " << basic.add(2.5f, 3.5f) << endl; 
+
+    // Demonstrate Overriding
+    Calculator* ptr; // Base class pointer
+    ptr = &sci;      // Base class pointer to derived class object
+    ptr->showType();   
 
     return 0;
 }
