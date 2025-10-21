@@ -24,7 +24,7 @@ class Circle : public Shape {
         }
 };
 
-// Derived class inheriting from Shape
+// Derived class inheriting from Shape class
 class Square : public Shape {
     private:
         double side;  
