@@ -20,7 +20,7 @@ vector<int> findPair(vector<int> &arr, int sum)
 
 int main()
 {
-    vector<int> values = {2, 7, 11, 15};
+    vector<int> values = {3, 5, 9, 12, 8};
     int targetSum = 13;
     vector<int> answer = findPair(values, targetSum);
 

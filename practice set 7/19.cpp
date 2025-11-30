@@ -22,7 +22,7 @@ int longestUniqueSubstring(string & text) {
 }
 
 int main() {
-    string input = "abcabcbb";
+    string input = "pwwkew";
     int answer = longestUniqueSubstring(input);
 
     cout << "Length of longest substring without repeating characters: " << answer << endl;
