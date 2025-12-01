@@ -25,7 +25,7 @@ int countSubarrays(vector<int>& arr, int targetSum) {
 
 int main() {
     vector<int> numbers = {1, 2, 3};
-    int desiredSum = 2;
+    int desiredSum = 5;
 
     int result = countSubarrays(numbers, desiredSum);
 
